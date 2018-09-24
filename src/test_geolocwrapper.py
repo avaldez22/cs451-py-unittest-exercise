@@ -3,7 +3,6 @@ import unittest
 
 from geolocwrapper import GeoLocWrapper
 from geopy.exc import GeopyError
-from geopy.distance import geodesic
 
 
 class TestGeoLocWrapper(unittest.TestCase):
@@ -24,10 +23,6 @@ class TestGeoLocWrapper(unittest.TestCase):
 
 
     # Begin adding your unit tests for the GeoLocWrapper module.
-        def test_init_fail(self):
-        with self.assertRaises(GeopyError):
-            test = GeoLocWrapper("2415 Calle Alegre, las vegas, nm")
-            
     def test_get_distance_miles(self):
         loc = GeoLocWrapper('1701 bryant st, denver, co')
         dist = loc.get_distance_miles('1314 chavez st, las vegas, nm')

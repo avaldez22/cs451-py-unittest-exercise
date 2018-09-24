@@ -3,7 +3,6 @@
 from geopy.distance import distance
 from geopy.geocoders import Nominatim
 from geopy.exc import GeopyError
- from geopy.distance import geodesic 
 
 class GeoLocWrapper:
     """A class that wraps a limited set of utilities around a geopy Location object. Class provides an API for handling operations on a specific geopy.location.Location object.
@@ -11,7 +10,7 @@ class GeoLocWrapper:
     https://geopy.readthedocs.io/en/stable/    
     """
 
-	def __init__(self, addr_str='',dest_addr_str=''):
+	def __init__(self, addr_str=''):
         """Create a new GeoLocWrapper object that creates a connection to 
         Nominatum geo web service and initializes a geopy location object from
         an address string.
